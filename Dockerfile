@@ -1,5 +1,7 @@
-FROM openjdk:21-jdk-slim AS build
+FROM ubuntu:latest AS build
 RUN apt-get update
+
+FROM openjdk:21-jdk-slim
 
 COPY . .
 
