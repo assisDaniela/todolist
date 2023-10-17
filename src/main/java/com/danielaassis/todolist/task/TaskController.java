@@ -62,7 +62,7 @@ public class TaskController {
         if(task.isPresent()) {
             UUID taskIdUser = (UUID) task.get().getIdUser();
             if(!taskIdUser.equals(idUser)) {
-                return ResponseEntity.badRequest().body("User has no permission to update this task")
+                return ResponseEntity.badRequest().body("User has no permission to update this task");
             }
             
             // taskModel -> possible properties with null values given by the user
